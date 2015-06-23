@@ -9,15 +9,18 @@ function ajouterArticle() {
 }
 function creeListeArticle() {
 	var divListeArticle = document.getElementById("listeArticle");
-	var articles = "";
+	var articlesHTML = "";
 	var i = 0;
 	for (i in listeArticle) {
 		var article = listeArticle[i];
-		articles = articles + article + " <button onclick=\"supprArticle(" + i
-				+ ")\">X</button> <br>";
+		articlesHTML = articlesHTML
+				+ "<TR><TD>"
+				+ article
+				+ "</TD><TD><button class=\"btn btn-danger\" onclick=\"supprArticle("
+				+ i + ")\">X</button></TD></TR>";
 	}
-	console.log(articles);
-	divListeArticle.innerHTML = articles;
+	console.log(articlesHTML);
+	divListeArticle.innerHTML = articlesHTML;
 }
 function supprArticle(numArticle) {
 	listeArticle.splice(numArticle, 1);
