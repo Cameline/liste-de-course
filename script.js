@@ -1,4 +1,5 @@
 var listeArticle = [];
+var listeImage = [ "fraise", "poire", "pomme" ];
 function ajouterArticle() {
 	console.log("lancement ajouter article");
 	var nomArticle = document.getElementById("nom").value;
@@ -17,16 +18,17 @@ function ajouterArticle() {
 }
 function creeListeArticle() {
 	var divListeArticle = document.getElementById("listeArticle");
-	var articlesHTML = "<tr><th>Article</th><th>Quantite</th><th>Supprimer</th></tr>";
+	var articlesHTML = "<tr><th>Article</th><th>Quantite</th><th></th><th>Supprimer</th></tr>";
 	var i = 0;
 	for (i in listeArticle) {
 		var article = listeArticle[i];
+		var imageHTML = "<img src=\"image/"+article.nom+".jpg\">";
 		articlesHTML = articlesHTML
 				+ "<TR><TD>"
 				+ article.nom
 				+ "</TD><TD>"
 				+ article.nombre
-				+ "</TD><TD><button class=\"btn btn-danger\" onclick=\"supprArticle("
+				+ "</TD><TD>"+imageHTML+"</TD><TD><button class=\"btn btn-danger\" onclick=\"supprArticle("
 				+ i + ")\">X</button></TD></TR>";
 	}
 	console.log(articlesHTML);
