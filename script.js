@@ -1,5 +1,4 @@
 var listeArticle = [];
-var listeImage = [ "fraise", "poire", "pomme" ];
 function ajouterArticle() {
 	console.log("lancement ajouter article");
 	var nomArticle = document.getElementById("nom").value;
@@ -66,4 +65,11 @@ function negatif() {
 		nombre = 1;
 	}
 	input.value = nombre;
+}
+function afficherImage(){
+	var value = document.getElementById("nom").value;
+	console.log("afficherImage"+value);
+	var imageHTML = "<img src=\"image/"+value+".jpg\">"; 
+	var divafficherImage = document.getElementById("image");
+	divafficherImage.innerHTML = imageHTML;
 }
