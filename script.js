@@ -21,7 +21,7 @@ function creeListeArticle() {
 	var i = 0;
 	for (i in listeArticle) {
 		var article = listeArticle[i];
-		var imageHTML = "<img src=\"image/"+article.nom+".jpg\">";
+		var imageHTML = "<img class=\"petiteImage\" src=\"image/"+article.nom+".jpg\">";
 		articlesHTML = articlesHTML
 				+ "<TR><TD>"
 				+ article.nom
@@ -69,7 +69,7 @@ function negatif() {
 function afficherImage(){
 	var value = document.getElementById("nom").value;
 	console.log("afficherImage"+value);
-	var imageHTML = "<img src=\"image/"+value+".jpg\">"; 
+	var imageHTML = "<img class=\"grandeImage\" src=\"image/"+value+".jpg\">"; 
 	var divafficherImage = document.getElementById("image");
 	divafficherImage.innerHTML = imageHTML;
 }

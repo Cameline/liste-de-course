@@ -1,7 +1,18 @@
-#nouvelarticle{
+#nouvelarticle {
 	background-color: #90a0bb;
 }
-img{
+
+img {
 	width: 45px;
 	height: 45px;
+}
+
+.petiteImage {
+	width: 45px;
+	height: 45px;
+}
+
+.grandeImage {
+	width: 90px;
+	height: 90px;
 }
